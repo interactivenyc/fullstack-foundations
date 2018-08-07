@@ -5,6 +5,7 @@ function puppyFactory(name, breed) {
   newPuppy.name = name;
   newPuppy.breed = breed;
 
+  console.log(newPuppy);
   return newPuppy;
 }
 
@@ -14,19 +15,18 @@ function puppy() {
     console.log('Ruff, Ruff');
   }
 
-  const sleep = () => {
+  function sleep() {
     console.log('zzzZZZZZzzzz');
   }
 
 }
 
-console.log('Testing...');
+console.log('Testing New Puppy...');
 let steve = puppyFactory('steve', 'mutt');
-console.log(steve.name);
+console.log('steve.name:', steve.name);
 steve.bark();
 
-
-  /*
+  
   describe('puppyFactory refactor', () => {
 
     it('does not contain `bark` or `sleep` properties directly instances', () => {
@@ -57,6 +57,3 @@ steve.bark();
     
     
   });
-
-  */
-
