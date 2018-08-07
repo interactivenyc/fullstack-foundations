@@ -1,35 +1,38 @@
 // YOUR CODE BELOW
 
 function puppyFactory(name, breed) {
-    return Object.create(puppy, {"name":{value:name}, "breed":{value:breed}});
+  const newPuppy = Object.create(puppy);
+  newPuppy.name = name;
+  newPuppy.breed = breed;
+
+  return newPuppy;
+}
+
+function puppy() {
+
+  function bark(){
+    console.log('Ruff, Ruff');
   }
-  
-  function puppy(name, breed) {
-    // let name = name;
-    // let breed = breed;
-    function bark() {
-      console.log('Ruff, Ruff');
-    };
-    function sleep() {
-      console.log('zzzZZZZZzzzz');
-    };
+
+  const sleep = () => {
+    console.log('zzzZZZZZzzzz');
   }
-  
-  
-  
-  console.log("Testing...");
-  let steve = puppyFactory("steve", "mutt");
-  console.log(steve.name);
-  //steve.sleep();
-  
-  
-  
+
+}
+
+console.log('Testing...');
+let steve = puppyFactory('steve', 'mutt');
+console.log(steve.name);
+steve.bark();
+
+
+  /*
   describe('puppyFactory refactor', () => {
-  
+
     it('does not contain `bark` or `sleep` properties directly instances', () => {
       const zach = puppyFactory('zach', 'beagle');
       const instanceProperties = Object.keys(zach);
-      
+
       expect(instanceProperties.includes('bark')).toBe(false);
       expect(instanceProperties.includes('sleep')).toBe(false);
     });
@@ -53,11 +56,7 @@ function puppyFactory(name, breed) {
     });
     
     
-    
-  
   });
 
-  
-  
-  
-  
+  */
+

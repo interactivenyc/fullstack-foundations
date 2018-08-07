@@ -1,0 +1,6 @@
+{
+    "extends": "Fullstack",
+    "rules": {
+        "no-trailing-spaces": "off"
+    }
+}
