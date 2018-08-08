@@ -1,5 +1,18 @@
 // YOUR CODE BELOW
 
+
+const puppy = {
+
+  bark(){
+    console.log('Ruff, Ruff');
+  },
+
+  sleep() {
+    console.log('zzzZZZZZzzzz');
+  }
+
+}
+
 function puppyFactory(name, breed) {
   const newPuppy = Object.create(puppy);
   newPuppy.name = name;
@@ -9,24 +22,13 @@ function puppyFactory(name, breed) {
   return newPuppy;
 }
 
-function puppy() {
-
-  function bark(){
-    console.log('Ruff, Ruff');
-  }
-
-  function sleep() {
-    console.log('zzzZZZZZzzzz');
-  }
-
-}
 
 console.log('Testing New Puppy...');
 let steve = puppyFactory('steve', 'mutt');
 console.log('steve.name:', steve.name);
 steve.bark();
 
-  
+
   describe('puppyFactory refactor', () => {
 
     it('does not contain `bark` or `sleep` properties directly instances', () => {
