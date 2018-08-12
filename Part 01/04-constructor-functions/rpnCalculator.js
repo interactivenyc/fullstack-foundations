@@ -48,9 +48,9 @@ RPNCalculator.prototype.divide = function() {
     return this.value();
 };
 
-// let calculator = new RPNCalculator();
-// console.log(calculator);
-// console.log("value", calculator.value);
+let calculator = new RPNCalculator();
+console.log(calculator);
+console.log("value", calculator.plus);
 // console.log("value()", calculator.value());
 // console.log(calculator.push(3));
 // console.log(calculator.push(3));
