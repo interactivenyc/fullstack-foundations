@@ -101,7 +101,22 @@ class RopeDude {
 
 
 function simulateRopeDude(pString) {
-  return pString;
+  const characters =['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  const game = new RopeDude(secretWord);
+  
+  function playRopeDude() {
+    if(game.gameState !== 'playing'){
+      return game.getGameStateMessage();
+    } else {
+      const randomIndex = Math.floor(Math.random() * 26);
+      const guess = characters[randomIndex];
+      game.submitGuess(guess);
+      game.computeGameState();
+      return playRopeDude();
+    }
+  }
+
+  return playRopeDude();
 }
 
 
