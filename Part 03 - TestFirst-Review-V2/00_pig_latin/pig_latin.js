@@ -9,11 +9,14 @@ function pigify(phrase) {
         // console.log('word', word);
         
         for (let j = 0; j < word.length; j++) {
-            if (vowels.includes(word[j])) {
-                // console.log('word', j, word.substring(0, j), ':', word.substring(j, word.length));
-                let pigWord = word.substring(j, word.length) + word.substring(0, j) + 'ay';
-                wordArray[i] = pigWord;
-                break;
+            let letter = word[j];
+            if (vowels.includes(letter)) {
+                if (letter !== 'u' || (letter === 'u' && word[j - 1] !== 'q')) {
+                    // console.log('word', j, word.substring(0, j), ':', word.substring(j, word.length));
+                    let pigWord = word.substring(j, word.length) + word.substring(0, j) + 'ay';
+                    wordArray[i] = pigWord;
+                    break;
+                }
             }
         }
     }

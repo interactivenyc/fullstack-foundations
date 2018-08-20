@@ -6,9 +6,15 @@
 // paramaters, but if you want your specs to pass keep the function
 // declaration syntax.
 function difference(array, arrayTwo) {
+    let outArray = array.filter(item => {
+        return arrayTwo.indexOf(item) === -1;
+    });
 
+    return outArray;
 }
 
+function symmetricDiff(array, arrayTwo) {
+    let outArray = difference(array, arrayTwo).concat(difference(arrayTwo, array));
 
-
-
+    return outArray;
+}
