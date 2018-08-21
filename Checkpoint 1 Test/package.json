@@ -1,0 +1,23 @@
+{
+  "name": "foundations-challenge-1",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "testem",
+    "grade": "node_modules/.bin/testem ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FullstackAcademy/foundations-challenge-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FullstackAcademy/foundations-challenge-1/issues"
+  },
+  "homepage": "https://github.com/FullstackAcademy/foundations-challenge-1#readme",
+  "dependencies": {
+    "testem": "^1.6.0"
+  }
+}
