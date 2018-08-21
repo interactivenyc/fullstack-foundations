@@ -6,6 +6,25 @@
 // paramaters, but if you want your specs to pass keep the function
 // declaration syntax.
 function search(func) {
-  
+
+    let result = false;
+
+    //this = array, passed in through the call method
+    this.forEach(item => {
+        if (func(item)){
+            result = true;
+        } else if (Array.isArray(item) && !result) {
+            result = search.call(item, func);
+        }
+    });
+    return result;
 }
+
+
+
+
+
+// search.call([1,2,[3,4,5],6], function(val) {
+//     return val === 5;
+// });
 
