@@ -7,7 +7,7 @@ function findObjPropsHasOwn(obj) {
             hasProperty.push(args[i]);
         }
     }
-    return hasProperty.join(", ");
+    return hasProperty.join(', ');
 }
 
 function Rectangle(color, height, width){    
@@ -18,5 +18,5 @@ function Rectangle(color, height, width){
 
 function findObjKeys(obj) {
     let keys = Object.keys(obj);
-    return keys.join(", ");
+    return keys.join(', ');
 }
