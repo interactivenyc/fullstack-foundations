@@ -2,6 +2,6 @@
 
 // Place your settings in this file to overwrite the default settings
 {
-    "liveServer.settings.root": "/HTML-CSS/",
+    "liveServer.settings.root": "/HTML-CSS/guessing-game/",
     "liveServer.settings.CustomBrowser": "chrome"
 }

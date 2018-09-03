@@ -8,13 +8,29 @@
     <!-- the MAIN.CSS file is linked here -->
   </head>
 
-  <body>
+  <body onload="initialize()">
+    <h1 id="title">The Guessing Game</h1>
+    <h2 id="prompt">Enter a number between 0 and 100</h2>
+
+    <div class="form">
+        <input id="inputField" type="text" placeholder="#">
+        <button onclick="guess()">Submit</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <ul class="guess-list">
+        <li class="guesses">guess1</li>
+        <li class="guesses">guess2</li>
+        <li class="guesses">guess3</li>
+        <li class="guesses">guess4</li>
+        <li class="guesses">guess5</li>
+
+    </div>
+    
 
 
 
-
-
-    <!-- <script src='js/guessing-game.js'></script> -->
+    <script src='js/guessing-game.js'></script>
     <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
   </body>
 
