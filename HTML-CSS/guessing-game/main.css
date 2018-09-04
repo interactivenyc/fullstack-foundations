@@ -1,5 +1,10 @@
 /* Write your CSS code in this file */
 
+body {
+    background-image: url("./assets/questionMarkBG.jpg");
+    background-color: lightblue;
+}
+
 #title {
     /* background-color: aquamarine; */
     margin: 0;

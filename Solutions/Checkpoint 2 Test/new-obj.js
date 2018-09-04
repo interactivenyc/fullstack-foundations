@@ -1,0 +1,1 @@
+const newObj = constructorFunc => Object.create(constructorFunc.prototype);
